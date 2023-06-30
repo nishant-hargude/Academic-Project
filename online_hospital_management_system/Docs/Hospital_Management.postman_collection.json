@@ -1,0 +1,1499 @@
+{
+	"info": {
+		"_postman_id": "f77502af-5ea2-4c9c-9344-9bb3b1448b08",
+		"name": "Hospital_Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24853428"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Add Admin",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc0BnbWFpbC5jb20iLCJleHAiOjE2Nzc0NDc3ODQsImlhdCI6MTY3NzQyOTc4NH0.-1v4PfryQTeoroqdML8wAddPmp11GB_yWjlydzcAvVzqCtto5ZzfqZjey_a3H7qyNut9TKq4XQDaMPFTaKC0bg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"qualificaton\": \"BA\",\r\n    \"salary\": 1230.5,\r\n    \"status\": true,\r\n    \"user\": {\r\n        \"firstName\": \"em\",\r\n        \"lastName\": \"kong\",\r\n        \"email\": \"ad@gmail.com\",\r\n        \"password\":\"ss@123\",\r\n        \"gender\": \"Male\",\r\n        \"securityQue\": \"What is your Nickname?\",\r\n        \"securityAns\": \"KK\",\r\n        \"mobileNo\": \"4858584625344\",\r\n        \"bloodGroup\": \"A+ve\",\r\n        \"dob\": \"1998-09-21\",\r\n        \"address\": {\r\n            \"plotNo\": \"p221\",\r\n            \"buildingName\": \"High Mont\",\r\n            \"areaName\": \"Hinjewadi\",\r\n            \"city\": \"Pune\",\r\n            \"state\": \"Maharashtra\",\r\n            \"country\": \"India\",\r\n            \"pincode\": 411057\r\n        },\r\n        \"roles\":[]\r\n    },\r\n    \"hiredate\": \"2022-02-02\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/employee/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"employee",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Receptionist (ADMIN)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhQGdtYWlsLmNvbSIsImV4cCI6MTY3Nzc3MTgxMSwiaWF0IjoxNjc3NzUzODExfQ.dHhXyHAP6bLQoIB-M01qNyUlSBR9PB0cfdBuCP3Honly0u-gkJN6beHEKYG384uzX0dlPN_xq8KeQA04N61E9Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc0BnbWFpbC5jb20iLCJleHAiOjE2Nzc0NDc3ODQsImlhdCI6MTY3NzQyOTc4NH0.-1v4PfryQTeoroqdML8wAddPmp11GB_yWjlydzcAvVzqCtto5ZzfqZjey_a3H7qyNut9TKq4XQDaMPFTaKC0bg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"qualificaton\": \"BA\",\r\n    \"salary\": 1230.5,\r\n    \"status\": true,\r\n    \"user\": {\r\n        \"firstName\": \"em\",\r\n        \"lastName\": \"kong\",\r\n        \"email\": \"r@gmail.com\",\r\n        \"password\":\"ss@123\",\r\n        \"gender\": \"Male\",\r\n        \"securityQue\": \"What is your Nickname?\",\r\n        \"securityAns\": \"KK\",\r\n        \"mobileNo\": \"4858584625344\",\r\n        \"bloodGroup\": \"A+ve\",\r\n        \"dob\": \"1998-09-21\",\r\n        \"address\": {\r\n            \"plotNo\": \"p221\",\r\n            \"buildingName\": \"High Mont\",\r\n            \"areaName\": \"Hinjewadi\",\r\n            \"city\": \"Pune\",\r\n            \"state\": \"Maharashtra\",\r\n            \"country\": \"India\",\r\n            \"pincode\": 411057\r\n        },\"roles\":[]\r\n    },\r\n    \"hiredate\": \"2022-02-02\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/employee/receptionist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"employee",
+								"receptionist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Accountant (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"qualificaton\": \"CA\",\r\n    \"salary\": 1230.5,\r\n    \"status\": true,\r\n    \"user\": {\r\n        \"firstName\": \"em\",\r\n        \"lastName\": \"kong\",\r\n        \"email\": \"e11@gmail.com\",\r\n        \"password\":\"ss@1235\",\r\n        \"gender\": \"Male\",\r\n        \"role\": \"ROLE_RECEPTIONIST\",\r\n        \"securityQue\": \"What is your Nickname?\",\r\n        \"securityAns\": \"KK\",\r\n        \"mobileNo\": \"4858584625344\",\r\n        \"bloodGroup\": \"A+ve\",\r\n        \"dob\": \"1998-09-21\",\r\n        \"address\": {\r\n            \"plotNo\": \"p221\",\r\n            \"buildingName\": \"High Mont\",\r\n            \"areaName\": \"Hinjewadi\",\r\n            \"city\": \"Pune\",\r\n            \"state\": \"Maharashtra\",\r\n            \"country\": \"India\",\r\n            \"pincode\": 411057\r\n        }\r\n    },\r\n    \"hiredate\": \"2022-02-02\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/employee/accountant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"employee",
+								"accountant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Employee ( pagination ) (ADMIN)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhQGdtYWlsLmNvbSIsImV4cCI6MTY3NzY5MTczOCwiaWF0IjoxNjc3NjczNzM4fQ._-rLxynYpDljiLpxlayPMEd_TlIhFceib6i6Q7v7Zag9jGXCQgA9a4Wgehqa7D0jIy8m3BJzRYVGCs8P5IlHhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/employee?pageNumber=0&pageSize=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"employee"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee (ADMIN)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc3NzQGdtYWlsLmNvbSIsImV4cCI6MTY3NzQ4MzU4MiwiaWF0IjoxNjc3NDY1NTgyfQ.FfpXsPxzGvcpzl6DOABzGTE9FNAXm3TP4BcblvhjfkScDsCXOxbBxrr6KPCc79L2DboI08QpmSF91xQA-BfIwg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"qualificaton\": \"A\",\r\n    \"salary\": 1230.5,\r\n    \"status\": true,\r\n    \"user\": {\r\n        \"firstName\": \"m\",\r\n        \"lastName\": \"kong\",\r\n        \"gender\": \"Male\",\r\n        \"email\": \"dsfe1fh@gmail.com\",\r\n        \"password\":\"ss222@\",\r\n        \"securityQue\": \"What is your Nickname?\",\r\n        \"securityAns\": \"KK\",\r\n        \"mobileNo\": \"4858584625344\",\r\n        \"bloodGroup\": \"A+ve\",\r\n        \"dob\": \"1998-09-21\",\r\n        \"address\": {\r\n            \"plotNo\": \"p21\",\r\n            \"buildingName\": \"High Mont\",\r\n            \"areaName\": \"Hinjewadi\",\r\n            \"city\": \"Pune\",\r\n            \"state\": \"Maharashtra\",\r\n            \"country\": \"India\",\r\n            \"pincode\": 411057\r\n        }\r\n    },\r\n    \"hiredate\": \"2022-02-02\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/employee/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"employee",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee(receptionist / accountant) (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/employee/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"employee",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Employee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/employee/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"employee",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Doctor",
+			"item": [
+				{
+					"name": "Add Doctor (ADMIN)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZEBnbWFpbC5jb20iLCJleHAiOjE2Nzg0MjcyOTQsImlhdCI6MTY3ODQwOTI5NH0.TUhjdbwr33xKrejBumzdVVgjzJpIbcWyFWtuuUGoF5QI-OXy7N0tCkxCD_pOF483cT2oSZT6dvDYLJHd4m7FPA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"qualificaton\": \"MD\",\r\n        \"salary\": 1230.5,\r\n        \"status\": true,\r\n        \"user\": {\r\n            \"firstName\": \"em\",\r\n            \"lastName\": \"kong\",\r\n            \"email\": \"fgdgsdfgsdfg@gmail.com\",\r\n            \"password\":\"ss@123\",\r\n            \"gender\": \"Male\",\r\n            \"securityQue\": \"What is your Nickname?\",\r\n            \"securityAns\": \"KK\",\r\n            \"mobileNo\": \"4858584625344\",\r\n            \"bloodGroup\": \"A+ve\",\r\n            \"dob\": \"1998-09-21\",\r\n            \"address\": {\r\n                \"plotNo\": \"p221\",\r\n                \"buildingName\": \"High Mont\",\r\n                \"areaName\": \"Hinjewadi\",\r\n                \"city\": \"Pune\",\r\n                \"state\": \"Maharashtra\",\r\n                \"country\": \"India\",\r\n                \"pincode\": 411057\r\n            },\"roles\":[]\r\n        },\r\n        \"hiredate\": \"2022-02-02\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/doctor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Doctor (ADMIN)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc3NzQGdtYWlsLmNvbSIsImV4cCI6MTY3NzQ4Mjc3NywiaWF0IjoxNjc3NDY0Nzc3fQ.NHNCVOudGZ-eiDzryvmKuw3wqlg2WKvcrIc-pEd__OUP3p54ET5VwqQGpqsJg4KIXOWgRxUGTQDFvKwsmDTSaQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"doctorFee\": 230.5,\r\n    \"startTime\": \"10:00:00\",\r\n    \"endTime\": \"20:00:00\",\r\n    \"employee\": {\r\n        \"qualificaton\": \"MD\",\r\n        \"salary\": 1230.5,\r\n        \"status\": true,\r\n        \"user\": {\r\n            \"firstName\": \"em\",\r\n            \"lastName\": \"king\",\r\n            \"password\":\"ss12@\",\r\n            \"gender\": \"Male\",\r\n            \"securityQue\": \"What is your Nickname?\",\r\n            \"securityAns\": \"KK\",\r\n            \"mobileNo\": \"4858584625344\",\r\n            \"bloodGroup\": \"A+ve\",\r\n            \"dob\": \"1998-09-21\",\r\n            \"address\": {\r\n                \"plotNo\": \"p21222\",\r\n                \"buildingName\": \"High Mont\",\r\n                \"areaName\": \"Hinjewadi\",\r\n                \"city\": \"Pune\",\r\n                \"state\": \"Maharashtra\",\r\n                \"country\": \"India\",\r\n                \"pincode\": 411057\r\n            }\r\n        },\r\n        \"hiredate\": \"2022-02-02\"\r\n    },\r\n    \"patients\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/doctor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"doctor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Doctor (ADMIN)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc3NzQGdtYWlsLmNvbSIsImV4cCI6MTY3NzQ5NjM3OSwiaWF0IjoxNjc3NDc4Mzc5fQ.JG-fwkF5g5jWn_JwnXDZC1_SByT9__nk33J0AiZ_56zriJOWhlwPjPh1tUsHq_dz__Q_CpFGatFsuUHnVF79hg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/doctor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"doctor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Doctor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/doctor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"doctor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Doctors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/doctor/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"doctor",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "Add Patient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhQGdtYWlsLmNvbSIsImV4cCI6MTY3NzU5Mjg4OCwiaWF0IjoxNjc3NTc0ODg4fQ.b2AymcWlpcVaG0CHWjWIrA4pjygMMKqQlb2PtF1j8I-0j_guxeEdPqzkPAaGEgDxsAKn3_K06XM4RXKOV5Zyow",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"admitStatus\": false,\r\n    \"currentStatus\": false,\r\n    \"action\": false,\r\n    \"user\": {\r\n        \"firstName\": \"em\",\r\n        \"lastName\": \"kong\",\r\n        \"email\": \"ss@gmail.com\",\r\n        \"password\":\"ss@123\",\r\n        \"gender\": \"Male\",\r\n        \"securityQue\": \"What is your Nickname?\",\r\n        \"securityAns\": \"KK\",\r\n        \"mobileNo\": \"4858584625344\",\r\n        \"bloodGroup\": \"A+ve\",\r\n        \"dob\": \"1998-09-21\",\r\n        \"address\": {\r\n            \"plotNo\": \"p221\",\r\n            \"buildingName\": \"High Mont\",\r\n            \"areaName\": \"Hinjewadi\",\r\n            \"city\": \"Pune\",\r\n            \"state\": \"Maharashtra\",\r\n            \"country\": \"India\",\r\n            \"pincode\": 411057\r\n        }\r\n    },\r\n    \"doctor\":[],\r\n    \"ward\":[]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/patients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Patient (PATIENT)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc0BnbWFpbC5jb20iLCJleHAiOjE2Nzc3Nzg3NzksImlhdCI6MTY3Nzc2MDc3OX0.mpUtWXkZ27k6dSA9aOD01ZuMBHA5jqCadVixogeONGtsdvAGUa9aoSEMYMBxL6pG06ydgN5eoklxEIbfyIBWcg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"admitStatus\": false,\r\n    \"currentStatus\": true,\r\n    \"action\": false,\r\n    \"user\": {\r\n        \"firstName\": \"em\",\r\n        \"lastName\": \"kong\",\r\n        \"gender\": \"Male\",\r\n        \"securityQue\": \"What is your Nickname?\",\r\n        \"securityAns\": \"KK\",\r\n        \"mobileNo\": \"4858584625344\",\r\n        \"bloodGroup\": \"A+ve\",\r\n        \"dob\": \"1998-09-21\",\r\n        \"address\": {\r\n            \"plotNo\": \"p200\",\r\n            \"buildingName\": \"High Mont\",\r\n            \"areaName\": \"Hinjewadi\",\r\n            \"city\": \"Pune\",\r\n            \"state\": \"Maharashtra\",\r\n            \"country\": \"India\",\r\n            \"pincode\": 411057\r\n        }\r\n    },\r\n    \"health_histories\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/patients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"patients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Appoint Doctor ( Receptionist )",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJAZ21haWwuY29tIiwiZXhwIjoxNjc4MDEwOTk5LCJpYXQiOjE2Nzc5OTI5OTl9.te44RGkDl-wWHh5Tlpvkmte-wvTiDjCJu66iRdgiG9HnQVTWkpZM2kSa61sMh9vrsAJ9l8QpzsGGvRBqwb_kuw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/patients/2/doctor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"patients",
+								"2",
+								"doctor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Patient ( ADMIN )",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/patients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"patients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Patient (pagination) (ADMIN)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZEBnbWFpbC5jb20iLCJleHAiOjE2Nzg0MjcyOTQsImlhdCI6MTY3ODQwOTI5NH0.TUhjdbwr33xKrejBumzdVVgjzJpIbcWyFWtuuUGoF5QI-OXy7N0tCkxCD_pOF483cT2oSZT6dvDYLJHd4m7FPA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/patients?pageNumber=0&pageSize=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"patients"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/patients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"patients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patients by doctor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/doctor/1/patients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"doctor",
+								"1",
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patients by ward",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/ward/1/patients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"ward",
+								"1",
+								"patients"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ward",
+			"item": [
+				{
+					"name": "Add Ward (ADMIN)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZEBnbWFpbC5jb20iLCJleHAiOjE2Nzg0NjEzODksImlhdCI6MTY3ODQ0MzM4OX0.zeBLPzeM-urFI2GnB-WI2g3xRUl2vfkb2OH9zl72tl-MlicOBDAZZcdCz6kYGMF4tcdXZowbCQ8SIf9yqHjzqQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"wardType\":\"ICU\",\r\n    \"wardCharges\":400.50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/wards/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"wards",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Ward (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"wardType\":\"general\",\r\n    \"wardCharges\":100.50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/wards/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"wards",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Ward (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/wards/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"wards",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ward",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/wards/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"wards",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Wards",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/wards/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"wards",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HealthHistory",
+			"item": [
+				{
+					"name": "Add Appointment (PATIENT)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc0BnbWFpbC5jb20iLCJleHAiOjE2Nzc5NjI3NDYsImlhdCI6MTY3Nzk0NDc0Nn0.diyuCsspBGnRjxzaaSBmjUgiUkaDA2kFnTx9abSrvugoP6g1nztehnJP5Zb7cjdgo4PwEEO1-N8k3mCVa3dA8Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symptoms\":\"cough\",\r\n    \"appointmentDate\":\"2022-02-25\",\r\n    \"appointmentTime\":\"10:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/patients/1/healthHistory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"patients",
+								"1",
+								"healthHistory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admit patient to ward (Allocate Bed) ( Receptionist )",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJAZ21haWwuY29tIiwiZXhwIjoxNjc4MDQwODE5LCJpYXQiOjE2NzgwMjI4MTl9.9rsfmr3pwM36AWbQqdWmJG15q0JgBjgpS5EnHCcULv39jCtt6iQHDllF5FkWB2fAz74Io0mD_cE3jW-tS9zq0g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"allocatedBed\":\"B\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/healthhistory/1/ward/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"healthhistory",
+								"1",
+								"ward",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admit patient to ward (Allocate Bed) ( Receptionist ) Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkQGdtYWlsLmNvbSIsImV4cCI6MTY3ODQ2MDg5OSwiaWF0IjoxNjc4NDQyODk5fQ.Nj34g3iqspEhRDiFooWOa-7BU06AJpHkcXizkU6ylVCPzmzEH0w_sZEWgeeOZ0UPljA1Qx7ZygoY3XKiXElG2Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"diseases\":\"Bsdadsad\",\r\n    \"prescriptionInstruction\":\"assds\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/healthhistory/true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"healthhistory",
+								"true"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Prescription and admit/discharge date(DOCTOR)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symptoms\":\"cold cough\",\r\n    \"appointmentDate\":\"2022-02-25\",\r\n    \"appointmentTime\":\"11:00:00\",\r\n\r\n    \"diseases\":\"dengu\",\r\n    \"prescriptionInstruction\":\"take rest\",\r\n    \r\n    \"admitDate\":\"2022-02-26\",\r\n    \"dischargeDate\":\"2022-02-26\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/healthhistory/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"healthhistory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All HH (pagination) (PATIENT)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc0BnbWFpbC5jb20iLCJleHAiOjE2Nzc5NjI3NDYsImlhdCI6MTY3Nzk0NDc0Nn0.diyuCsspBGnRjxzaaSBmjUgiUkaDA2kFnTx9abSrvugoP6g1nztehnJP5Zb7cjdgo4PwEEO1-N8k3mCVa3dA8Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/healthhistory?pageNumber=0&pageSize=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"healthhistory"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get HH",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/healthhistory/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"healthhistory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All HH by patient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzc0BnbWFpbC5jb20iLCJleHAiOjE2Nzc5NjI3NDYsImlhdCI6MTY3Nzk0NDc0Nn0.diyuCsspBGnRjxzaaSBmjUgiUkaDA2kFnTx9abSrvugoP6g1nztehnJP5Zb7cjdgo4PwEEO1-N8k3mCVa3dA8Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/patient/3/healthhistory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"patient",
+								"3",
+								"healthhistory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete HH",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/healthhistory/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"healthhistory",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medicine",
+			"item": [
+				{
+					"name": "Add Medicine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkQGdtYWlsLmNvbSIsImV4cCI6MTY3ODI2MzQ2NCwiaWF0IjoxNjc4MjQ1NDY0fQ.CG7tjqU2n7tnG1vMfgTH0qxvk2SBlyP6WQEeouZeeIsDiGlMi-XJESxfx03FE-_8389xbOeyPmpaj1VXqGD-ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"medicineName\":\"5\",\r\n    \"duration\":\"take medicine 2 times in a day after a meal\",\r\n    \"quantity\":5,\r\n    \"medicineCharges\":10000.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/healthhistory/4/medicine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"healthhistory",
+								"4",
+								"medicine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Medicine",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"medicineName\":\"5\",\r\n    \"duration\":\"take medicine 2 times in a day after a meal\",\r\n    \"quantity\":1,\r\n    \"medicineCharges\":100.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/medicine/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"medicine",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Medicine",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/medicine/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"medicine",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Medicine",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/medicine/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"medicine",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All medicines (pagination)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/medicine?pageNumber=0&pageSize=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"medicine"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Resources_MicroServices",
+			"item": [
+				{
+					"name": "Add Resource",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"resource_name\":\"oxygen tank\",\r\n    \"total_quantity\":100,\r\n    \"occupy_quantity\":60,\r\n    \"remaining_quantity\":40\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/resources/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"resources",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Resource",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"resource_name\":\"blood bank\",\r\n    \"total_quantity\":100,\r\n    \"occupy_quantity\":60,\r\n    \"remaining_quantity\":40\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/resources/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"resources",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Resource",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/resources/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"resources",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Resource",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/resources/0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"resources",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Resources (pagination)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/resources/?pageNumber=1&pageSize=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"resources",
+								""
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"admitStatus\": false,\r\n    \"currentStatus\": false,\r\n    \"action\": false,\r\n    \"user\": {\r\n        \"firstName\": \"em\",\r\n        \"lastName\": \"kong\",\r\n        \"email\": \"uyuy@gmail.com\",\r\n        \"password\":\"ss@123\",\r\n        \"gender\": \"Male\",\r\n        \"securityQue\": \"What is your Nickname?\",\r\n        \"securityAns\": \"KK\",\r\n        \"mobileNo\": \"4858584625344\",\r\n        \"bloodGroup\": \"A+ve\",\r\n        \"dob\": \"1998-09-21\",\r\n        \"address\": {\r\n            \"plotNo\": \"p221\",\r\n            \"buildingName\": \"High Mont\",\r\n            \"areaName\": \"Hinjewadi\",\r\n            \"city\": \"Pune\",\r\n            \"state\": \"Maharashtra\",\r\n            \"country\": \"India\",\r\n            \"pincode\": 411057\r\n        },\r\n        \"roles\":[]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"ad@gmail.com\",\r\n    \"password\":\"ss@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ForgotPass",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/v1/auth/email/d@gmail.com/forgot/sp@13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"email",
+						"d@gmail.com",
+						"forgot",
+						"sp@13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserByEmail (forgot pass)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/users/email/d@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"users",
+						"email",
+						"d@gmail.com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
